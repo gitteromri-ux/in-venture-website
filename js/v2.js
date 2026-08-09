@@ -27,12 +27,12 @@ function mountPreloader(onReady){
   const curtain = document.createElement('div');
   curtain.className = 'curtain';
   document.body.appendChild(curtain);
-  setTimeout(()=>document.body.classList.remove('is-locked'), 1600);
+  setTimeout(()=>document.body.classList.remove('is-locked'), 700);
   document.body.classList.add('is-locked');
 
   const bar = el.querySelector('.pre-bar i');
   const num = el.querySelector('.pre-n');
-  const DUR = 1500, t0 = Date.now();
+  const DUR = 550, t0 = Date.now();
   let done = false;
 
   function finish(){
@@ -54,7 +54,7 @@ function mountPreloader(onReady){
     if(p >= 1){ clearInterval(tick); finish(); }
   }, 40);
   setTimeout(()=>{ clearInterval(tick); finish(); }, DUR + 900);
-  setTimeout(finish, 2600);
+  setTimeout(finish, 1200);
 }
 
 /* ---------------- magnetic cursor ---------------- */

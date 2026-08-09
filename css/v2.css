@@ -242,16 +242,16 @@ body.v2 ::selection{ background:var(--hot); color:#fff; }
 }
 
 /* ---------- preloader: CSS-timed so JS load can never strand it ---------- */
-.pre{ animation:preOut .7s cubic-bezier(.76,0,.24,1) 1.5s forwards; }
+.pre{ animation:preOut .45s cubic-bezier(.76,0,.24,1) .55s forwards; }
 @keyframes preOut{ to{ opacity:0; visibility:hidden; pointer-events:none; } }
-.curtain{ animation:curtainUp 1.1s cubic-bezier(.76,0,.24,1) 1.7s forwards; }
+.curtain{ animation:curtainUp .8s cubic-bezier(.76,0,.24,1) .7s forwards; }
 @keyframes curtainUp{ to{ transform:scaleY(0); } }
-.pre-bar i{ animation:preBar 1.5s linear forwards; }
+.pre-bar i{ animation:preBar .55s linear forwards; }
 @keyframes preBar{ to{ right:0%; } }
-.ln > i{ animation:lnUp 1.15s cubic-bezier(.16,1,.3,1) 2s forwards; }
+.ln > i{ animation:lnUp 1.05s cubic-bezier(.16,1,.3,1) .85s forwards; }
 @keyframes lnUp{ to{ transform:none; } }
-.ln:nth-child(2) > i{ animation-delay:2.1s }
-.ln:nth-child(3) > i{ animation-delay:2.2s }
+.ln:nth-child(2) > i{ animation-delay:.95s }
+.ln:nth-child(3) > i{ animation-delay:1.05s }
 @media (prefers-reduced-motion:reduce){
   .pre,.curtain,.pre-bar i,.ln > i{ animation-duration:.01s !important; animation-delay:.01s !important; }
 }
