@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · IN Venture</title>
+<meta name="description" content="IN Venture, 94 Yigal Alon, Alon Tower 2, Floor 26, Tel Aviv, Israel 6789156. contact@in-venture.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.0/build/three.module.js" } }
+</script>
+<style>
+.cgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1.6rem,4vw,3.4rem); }
+.cblock h3{ font-family:var(--display); font-size:clamp(1.5rem,2.2vw,2rem); letter-spacing:-.02em; margin:1rem 0 .8rem; }
+.cblock a,.cblock address{ font-style:normal; font-size:1.1rem; line-height:1.7; }
+.cblock a:hover{ color:var(--red); }
+.maphold{ position:relative; aspect-ratio:16/7; overflow:hidden; background:var(--ivory-3); }
+.mapfallback{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem; }
+.mapframe{ position:relative; z-index:2; width:100%; height:100%; border:0; filter:grayscale(1) contrast(1.06); }
+.form{ display:grid; gap:1.1rem; max-width:640px; }
+.field{ display:grid; gap:.5rem; }
+.field label{ font-family:var(--mono); font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--moss); }
+.field input,.field textarea{
+  font:inherit; font-size:1.05rem; padding:.95rem 1.05rem; background:var(--ivory);
+  border:0; box-shadow:inset 0 0 0 1px rgba(11,59,46,.2); border-radius:3px; color:var(--forest);
+}
+.field input:focus,.field textarea:focus{ outline:0; box-shadow:inset 0 0 0 1.5px var(--forest); }
+.field textarea{ min-height:150px; resize:vertical; }
+@media (max-width:900px){ .cgrid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<section style="position:relative; min-height:72svh; display:flex; align-items:flex-end; overflow:hidden">
+  <div style="position:absolute; inset:0"><canvas id="globe3" style="width:100%; height:100%"></canvas></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(251,247,234,0) 40%, rgba(251,247,234,.9) 100%)"></div>
+  <div class="wrap" style="position:relative; padding-bottom:clamp(2.4rem,5vw,4rem)">
+    <p class="tag rv">Contact</p>
+    <h1 class="display mega rv" style="margin:1.2rem 0 0">Two clocks.<br><span class="italic">One desk.</span></h1>
+    <div class="clocks rv" id="cClocks" style="margin-top:2rem"></div>
+  </div>
+</section>
+
+<section class="sect wrap" style="padding-top:clamp(3rem,6vw,5rem)">
+  <div class="cgrid">
+    <div class="cblock rv">
+      <p class="tag">Visit</p>
+      <h3>Tel Aviv</h3>
+      <address>94 Yigal Alon<br>Alon Tower 2, Floor 26<br>Tel Aviv, Israel 6789156</address>
+      <a href="https://www.google.com/maps/search/?api=1&query=94+Yigal+Alon+Alon+Tower+2+Tel+Aviv" target="_blank" rel="noopener" style="display:inline-block; margin-top:1rem; border-bottom:1px solid var(--paper-line)">Open in Maps</a>
+    </div>
+    <div class="cblock rv">
+      <p class="tag">Write</p>
+      <h3>General</h3>
+      <a href="mailto:contact@in-venture.com">contact@in-venture.com</a>
+      <h3 style="margin-top:1.6rem">Japan disclosure</h3>
+      <a href="mailto:keizo@in-venture.com">keizo@in-venture.com</a>
+    </div>
+    <div class="cblock rv">
+      <p class="tag">Follow</p>
+      <h3>Elsewhere</h3>
+      <a href="https://www.linkedin.com/company/in-venture-sc/about/" target="_blank" rel="noopener">LinkedIn</a><br>
+      <a href="https://twitter.com/INVenture12" target="_blank" rel="noopener">X / Twitter</a><br>
+      <a href="https://www.sumitomocorp.com/en/jp" target="_blank" rel="noopener">Sumitomo Corporation</a>
+    </div>
+  </div>
+</section>
+
+<section class="sect" style="background:var(--ivory-2); padding-top:clamp(3rem,5vw,4rem)">
+  <div class="wrap two">
+    <div class="sticky">
+      <p class="tag rv">Pitch us</p>
+      <h2 class="display h1 rv" style="margin-top:1.2rem">One paragraph<br>on the market<br><span class="italic">you intend to take.</span></h2>
+      <p class="prose rv" style="margin-top:1.4rem">Deep tech, early stage, Israeli, aimed at a category. That is the filter. Everything else we work out on a call.</p>
+    </div>
+    <form class="form rv" id="pitch" action="mailto:contact@in-venture.com" method="post" enctype="text/plain">
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="co">Company</label><input id="co" name="company" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" type="email" name="email" required autocomplete="email"></div>
+      <div class="field"><label for="m">The market you intend to take</label><textarea id="m" name="message" required></textarea></div>
+      <button class="btn" type="submit"><span>Send to IN Venture</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></button>
+      <p class="tag" id="formnote" style="margin:0"></p>
+    </form>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(4rem,8vw,7rem)">
+  <div class="maphold rv">
+    <div class="mapfallback">
+      <p class="tag">Alon Tower 2 · Floor 26</p>
+      <p class="display h3" style="margin:.7rem 0 1.2rem">94 Yigal Alon, Tel Aviv</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=94+Yigal+Alon+Alon+Tower+2+Tel+Aviv" target="_blank" rel="noopener"><span>Open in Maps</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+    <iframe class="mapframe" title="IN Venture office, Alon Tower 2, Tel Aviv" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=94%20Yigal%20Alon%20Tel%20Aviv&output=embed"></iframe>
+  </div>
+</section>
+
+<script type="module">
+import { mountChrome, mountClocks } from './js/site.js';
+import { initGlobe } from './js/globe.js';
+mountChrome('Contact');
+mountClocks(document.getElementById('cClocks'));
+initGlobe(document.getElementById('globe3'), {cities:['Tel Aviv','Tokyo'], sunX:2.4, sunY:1.6, sunScale:.72});
+
+const f = document.getElementById('pitch');
+f.addEventListener('submit', e=>{
+  e.preventDefault();
+  const d = new FormData(f);
+  const body = `Name: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\n\n${d.get('message')}`;
+  location.href = `mailto:contact@in-venture.com?subject=${encodeURIComponent('Pitch · '+d.get('company'))}&body=${encodeURIComponent(body)}`;
+  document.getElementById('formnote').textContent = 'Your mail client is opening with the message ready to send.';
+});
+</script>
+</body>
+</html>

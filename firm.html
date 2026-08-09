@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Firm · IN Venture</title>
+<meta name="description" content="IN Venture is a Sumitomo Corporation backed venture fund investing in deep-tech early stage Israeli startups with the potential to become global category leaders.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+.unit{ grid-template-columns:70px minmax(0,1fr) minmax(0,.8fr); align-items:start; gap:clamp(1rem,3vw,3rem); }
+.unit-n{ color:var(--red); }
+.unit-t{ font-size:clamp(1.4rem,2.6vw,2.2rem); }
+.unit-d{ font-size:1rem; }
+@media (max-width:820px){ .unit{ grid-template-columns:1fr; gap:.5rem; } .unit-t{ font-size:1.5rem; } }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+
+<section class="wrap" style="padding-top:clamp(9rem,16vw,14rem)">
+  <p class="tag rv">The Firm · Integrity</p>
+  <h1 class="display mega rv" style="margin:1.2rem 0 0; max-width:14ch">A venture fund<br>with a <span class="italic">multinational<br>behind it.</span></h1>
+</section>
+
+<section class="sect wrap" style="padding-top:clamp(3rem,5vw,4rem)">
+  <div class="two">
+    <div class="sticky">
+      <p class="lead display rv">IN Venture is a Sumitomo Corporation backed venture fund.</p>
+    </div>
+    <div>
+      <p class="prose rv">We invest in deep-tech early stage Israeli startups that have the potential to become global category leaders. We seek to collaborate to improve society while digitally transforming Sumitomo Corporation's diverse business activities.</p>
+      <p class="prose rv" style="margin-top:1.2rem">We provide our portfolio companies with a highly skilled team conversant in Israeli business norms and a global corporation committed to partner and scale the technologies of tomorrow, today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- domains -->
+<section class="sect" style="background:var(--ivory-2)">
+  <div class="wrap">
+    <p class="tag rv">Domains</p>
+    <h2 class="display h1 rv" style="margin:1.2rem 0 3.2rem; max-width:16ch">Where we invest.</h2>
+    <div class="orbit">
+      <a class="orb rv" href="roadmaps.html#mobility"><img src="img/plate-mobility.jpg" alt="Mobility"><h4>Mobility</h4></a>
+      <a class="orb rv" href="roadmaps.html#energy"><img src="img/plate-energy.jpg" alt="Energy"><h4>Energy</h4></a>
+      <a class="orb rv" href="roadmaps.html#health"><img src="img/plate-health.jpg" alt="Digital Health"><h4>Digital Health</h4></a>
+      <a class="orb rv" href="roadmaps.html#agtech"><img src="img/plate-agtech.jpg" alt="Food and Agtech"><h4>Food &amp; Agtech</h4></a>
+      <a class="orb rv" href="roadmaps.html#cyber"><img src="img/plate-cyber.jpg" alt="IT and Cyber"><h4>IT &amp; Cyber</h4></a>
+    </div>
+  </div>
+</section>
+
+<!-- Sumitomo -->
+<section class="sect dark">
+  <div class="wrap">
+    <div class="two" style="align-items:center">
+      <div>
+        <img src="img/sumitomo.svg" alt="Sumitomo Corporation" class="rv" style="width:min(280px,60%); height:auto; filter:brightness(0) invert(1); opacity:.92">
+        <h2 class="display h1 rv" style="margin:1.8rem 0 0">The partner<br><span class="italic">behind the fund.</span></h2>
+        <p class="prose rv" style="margin-top:1.6rem"><a href="https://www.sumitomocorp.com/en/jp" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(242,237,227,.4)">Sumitomo Corporation</a> is a multi-billion-dollar Japanese industry leader with diverse commercial activities and an extensive global footprint that is committed to digital transformation across industries.</p>
+      </div>
+      <div style="position:relative; aspect-ratio:1/1; min-height:380px">
+        <canvas id="globe2" style="position:absolute; inset:0; width:100%; height:100%"></canvas>
+      </div>
+    </div>
+
+    <div class="stats" style="margin-top:clamp(3rem,6vw,5rem)">
+      <div class="stat rv"><p class="n"><span data-to="6">0</span></p><p class="l">Core business units</p></div>
+      <div class="stat rv"><p class="n"><small>~</small><span data-to="1000">0</span></p><p class="l">Group companies</p></div>
+      <div class="stat rv"><p class="n"><small>$</small><span data-to="71">0</span><small>B</small></p><p class="l">In total assets</p></div>
+      <div class="stat rv"><p class="n"><span data-to="113">0</span></p><p class="l">Locations all over the world</p></div>
+    </div>
+    <p class="prose rv" style="margin-top:2rem">Five corporate venture capital arms and 113 locations worldwide, with hubs in London, San Francisco, Tel Aviv, Hong Kong and Tokyo.</p>
+  </div>
+</section>
+
+<!-- six units -->
+<section class="sect wrap">
+  <p class="tag rv">Six core business units</p>
+  <h2 class="display h1 rv" style="margin:1.2rem 0 3rem; max-width:16ch">The doors a founder<br>can actually walk through.</h2>
+  <div id="units"></div>
+</section>
+
+<section class="sect abyss">
+  <div class="wrap" style="text-align:center">
+    <h2 class="display h1 rv">Technologies of tomorrow,<br><span class="italic red">today.</span></h2>
+    <a class="btn rv" style="--bg:var(--ivory); --fg:var(--forest); margin-top:2.4rem" href="value-creation.html"><span>How value creation works</span>
+      <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+  </div>
+</section>
+
+<script type="module">
+import { mountChrome, mountCounters } from './js/site.js';
+import { initGlobe } from './js/globe.js';
+mountChrome('Firm');
+mountCounters();
+initGlobe(document.getElementById('globe2'), {cities:['Tel Aviv','Tokyo','London','San Francisco','Hong Kong'], theme:'dark', sunX:1.9, sunY:1.5, sunScale:.62});
+
+const UNITS = [
+  ['01','Metal products','Steel and specialty materials, the origin of the group.'],
+  ['02','Transportation & Construction systems','Automotive, aviation, ships and construction equipment.'],
+  ['03','Infrastructure','Power, water and large-scale industrial projects.'],
+  ['04','Media & Digital','Broadcasting, telecoms and the group digital transformation programme.'],
+  ['05','Living related & Real estate','Food, retail, healthcare distribution and property.'],
+  ['06','Energy, Mineral resources, Chemical & Electronics','Upstream resources through advanced chemicals and components.']
+];
+document.getElementById('units').innerHTML = UNITS.map(([n,t,d])=>`
+  <div class="vig unit rv">
+    <span class="road-idx unit-n">${n}</span>
+    <p class="unit-t">${t}</p>
+    <span class="prose unit-d">${d}</span>
+  </div>`).join('');
+</script>
+</body>
+</html>

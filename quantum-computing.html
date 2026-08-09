@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quantum Computing · IN Venture</title>
+<meta name="description" content="Eyal Rosner on why the world of quantum computing is at roughly the same stage the computer industry was in the early 1970s.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+.readbar{ position:fixed; top:0; left:0; height:2px; background:var(--red); z-index:300; width:0; }
+.hero-art{ width:100%; height:min(56vh,520px); object-fit:cover; filter:grayscale(.3) contrast(1.08); }
+</style>
+</head>
+<body>
+<div class="readbar" id="readbar"></div>
+
+<section class="wrap-tight" style="padding-top:clamp(9rem,15vw,13rem)">
+  <p class="tag rv">Perspective · 16 October 2025</p>
+  <h1 class="display h1 rv" style="margin:1.2rem 0 1.6rem">Quantum Computing</h1>
+  <p class="tag rv">Eyal Rosner · Managing Partner</p>
+</section>
+
+<div class="wrap" style="margin-top:clamp(2.4rem,5vw,4rem)">
+  <img class="hero-art rv" src="img/post-quantum.jpg" alt="Quantum computing">
+</div>
+
+<article class="sect wrap-tight" style="padding-top:clamp(3rem,5vw,4.5rem)">
+  <div class="article">
+    <p class="drop rv">The world of quantum computing is currently at roughly the same stage that the computer industry was in the early 1970s.</p>
+    <p class="rv">What would you do if you could go back to 1975, the moment the personal computer was born, and get a glimpse of the computing world just before its breakthrough?</p>
+    <p class="rv">In 1975, the Altair 8800 was launched, considered the first personal computer, and it served as the catalyst for the founding of Microsoft that same year. At that time, there were only about 200 to 400 software companies worldwide.</p>
+    <p class="rv">Today, IBM, Google, Microsoft, and quite a few startups, including several promising Israeli ones, are investing billions in the race to build the first true quantum computer. In recent months alone, billions of dollars have been raised, and forecasts for mature systems range from 2027 to 2030. IBM's CEO recently announced that their system will be ready as early as 2029.</p>
+
+    <div class="pull rv" style="margin:3rem 0">
+      <p class="display">In 2019, Google demonstrated a quantum computer that solved a problem in 200 seconds, a task estimated to take the world's most powerful supercomputer about 10,000 years.</p>
+    </div>
+
+    <p class="rv">It's hard to overstate the importance of the quantum computing revolution. Despite this enormous promise, there are currently only about 400 to 450 quantum companies in existence, a negligible number given the scale of the expected revolution.</p>
+
+    <h3 class="rv">Three layers of the ecosystem</h3>
+    <p class="rv"><strong>Foundation layer.</strong> A few dozen companies are attempting to build quantum computers themselves, using five different technological approaches, each with its own advantages and challenges.</p>
+    <p class="rv"><strong>Infrastructure layer.</strong> A relatively small number of companies that enhance hardware performance or serve as control and management systems.</p>
+    <p class="rv"><strong>Application layer.</strong> Around 150 to 250 companies trying to build the bridge between the hardware and the outside world. Some, like our portfolio company <a href="https://www.classiq.io/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--paper-line)">Classiq</a>, are creating a kind of operating system that makes quantum computers accessible to businesses and organizations. Even today, while quantum computing power is still limited, many companies focus on optimization, materials science, machine learning, and cryptography, preparing their teams and algorithms for the moment when large, error-resistant quantum computers become available.</p>
+
+    <h3 class="rv">Where it already matters</h3>
+    <p class="rv">A quantum computer isn't relevant for every task, but in certain fields it already represents a dramatic leap forward:</p>
+    <ul>
+      <li class="rv">Cracking complex encryption</li>
+      <li class="rv">Advanced simulations in materials science</li>
+      <li class="rv">Drug discovery</li>
+      <li class="rv">Supply chain optimization</li>
+      <li class="rv">Climate modeling and analysis</li>
+      <li class="rv">Accelerating machine learning and AI, among others</li>
+    </ul>
+
+    <p class="rv">BCG has identified over 100 potential areas for quantum applications and estimated the market opportunity at 400 to 750 billion dollars per year, a scale that the global software industry only reached in 2014, when there were already over 100,000 software companies worldwide.</p>
+    <p class="rv">The quantum computing world today is roughly where the computing industry was in the early 1970s. We're at the dawn of a new software era, and it's approaching faster than most people realize.</p>
+  </div>
+</article>
+
+<section class="sect dark">
+  <div class="wrap">
+    <p class="tag rv">Continue</p>
+    <div class="river" style="margin-top:1.6rem">
+      <a class="river-item rv" href="roadmaps.html#cyber">
+        <span class="river-type">Roadmap</span><span class="river-title">IT &amp; Cyber</span>
+        <span class="river-by">Where Classiq sits in our thesis</span><span class="river-cta"><span>Open</span></span>
+      </a>
+      <a class="river-item rv" href="portfolio.html">
+        <span class="river-type">Portfolio</span><span class="river-title">Fifteen companies</span>
+        <span class="river-by">Ten active, five acquired</span><span class="river-cta"><span>Open</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+import { mountChrome } from './js/site.js';
+mountChrome('Insights');
+const bar = document.getElementById('readbar');
+addEventListener('scroll', ()=>{
+  const h = document.documentElement.scrollHeight - innerHeight;
+  bar.style.width = (scrollY/h*100)+'%';
+}, {passive:true});
+</script>
+</body>
+</html>

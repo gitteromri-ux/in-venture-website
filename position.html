@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Position · IN Venture</title>
+<meta name="description" content="IN Venture's position, stated in as few words as it can honestly be stated.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+  html,body{ height:100%; }
+  body{ background:#0B2A3C; color:#F6E3C9; }
+  body::after{ opacity:.05; }
+  .stage{ min-height:100svh; display:grid; place-items:center; padding:6rem var(--gutter) 3rem; text-align:center; }
+  .stage-inner{ width:min(700px,100%); }
+  .stage p{ font-family:var(--display); font-size:clamp(1.5rem,3.2vw,2.5rem); line-height:1.28; letter-spacing:-.02em; margin:0 0 1.5rem; color:#F6E3C9; }
+  .stage p.small{ font-family:var(--sans); font-size:1.06rem; line-height:1.7; color:rgba(246,227,201,.66); letter-spacing:0; }
+  .stage a.gold{ color:#ECC187; border-bottom:1px solid rgba(236,193,135,.35); }
+  .stage a.gold:hover{ border-bottom-color:#ECC187; }
+  .stage .sun{ width:74px; height:74px; border-radius:50%; background:var(--red); margin:0 auto 2.6rem; box-shadow:0 0 0 14px rgba(224,32,43,.10), 0 0 70px 12px rgba(224,32,43,.35); }
+  .backnav{ position:fixed; bottom:1.6rem; left:0; right:0; display:flex; gap:1.8rem; justify-content:center; flex-wrap:wrap; font-size:.9rem; }
+  .backnav a{ color:rgba(246,227,201,.55); }
+  .backnav a:hover{ color:#ECC187; }
+  .topmark{ position:fixed; top:1.6rem; left:var(--gutter); color:#F6E3C9; }
+</style>
+</head>
+<body>
+
+<a class="topmark" href="index.html" aria-label="IN Venture home">
+  <svg width="42" height="31" viewBox="0 0 46 34" fill="none" aria-hidden="true">
+    <circle cx="7.4" cy="5.2" r="4.4" fill="#E0202B"/>
+    <rect x="1.6" y="12" width="4.4" height="21" fill="currentColor"/>
+    <rect x="8.6" y="12" width="4.4" height="21" fill="currentColor"/>
+    <path d="M18.6 33V12h4.6l12.4 14.1V12h4.6v21h-4.6L23.2 18.9V33h-4.6z" fill="currentColor" opacity=".42"/>
+  </svg>
+</a>
+
+<main class="stage">
+  <div class="stage-inner">
+    <div class="sun"></div>
+    <p>We invest in deep-tech early stage Israeli startups that have the potential to become global category leaders.</p>
+    <p>Investment decisions are taken in Tel Aviv. Markets are opened through Sumitomo Corporation.</p>
+    <p class="small" style="margin-top:2.6rem">That is the whole position. Everything else on this site is evidence for it: <a class="gold" href="portfolio.html">fifteen companies</a>, <a class="gold" href="roadmaps.html">five roadmaps</a>, <a class="gold" href="firm.html">one balance sheet</a>. If it applies to you, write one paragraph to <a class="gold" href="mailto:contact@in-venture.com">contact@in-venture.com</a> and we will answer.</p>
+  </div>
+</main>
+
+<nav class="backnav">
+  <a href="index.html">Home</a>
+  <a href="firm.html">Firm</a>
+  <a href="value-creation.html">Value Creation</a>
+  <a href="roadmaps.html">Roadmaps</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="team.html">Team</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+</body>
+</html>

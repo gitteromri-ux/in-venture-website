@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IN Venture · A Sumitomo Corporation backed venture fund</title>
+<meta name="description" content="IN Venture invests in deep-tech early stage Israeli startups with the potential to become global category leaders, powered by the global presence of Sumitomo Corporation. Tel Aviv and Tokyo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-canvas"><canvas id="globe"></canvas></div>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="hero-kicker rv"><span class="dot"></span><span class="tag">Tel Aviv · Tokyo</span></div>
+    <h1 class="display mega rv">Israeli deep tech,<br>carried into<br><span class="italic red">world markets.</span></h1>
+    <div class="hero-sub">
+      <p class="prose rv">We partner with ambitious entrepreneurs disrupting large markets, leveraging global presence powered by Sumitomo Corporation.</p>
+      <div class="clocks rv" id="heroClocks"></div>
+      <a class="btn rv" href="portfolio.html"><span>See the portfolio</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="scrollcue"><span class="bar"></span><span class="tag">Scroll</span></div>
+</section>
+
+<!-- ============ STAT STRIP ============ -->
+<section class="wrap" style="padding-block:clamp(3.4rem,6vw,5rem)">
+  <div class="stats">
+    <div class="stat rv"><p class="n"><span data-to="15">0</span></p><p class="l">Israeli deep-tech companies backed to date</p></div>
+    <div class="stat rv"><p class="n"><span data-to="5">0</span></p><p class="l">Acquired, from cyber and genomics to digital assets</p></div>
+    <div class="stat rv"><p class="n"><small>$</small><span data-to="71">0</span><small>B</small></p><p class="l">Sumitomo Corporation total assets</p></div>
+    <div class="stat rv"><p class="n"><span data-to="113">0</span></p><p class="l">Sumitomo locations worldwide, on 5 continents</p></div>
+  </div>
+</section>
+
+<!-- ============ THESIS ============ -->
+<section class="sect" style="padding-top:clamp(2rem,4vw,3rem)">
+  <div class="gridlines"></div>
+  <div class="wrap two" style="position:relative">
+    <div class="sticky">
+      <p class="tag rv">01 · Integrity</p>
+      <h2 class="display h1 rv" style="margin-top:1.2rem">A fund with a<br><span class="italic">balance sheet<br>behind it.</span></h2>
+    </div>
+    <div>
+      <p class="lead display rv" style="max-width:26ch">IN Venture is a Sumitomo Corporation backed venture fund.</p>
+      <p class="prose rv" style="margin-top:1.8rem">We invest in deep-tech early stage Israeli startups that have the potential to become global category leaders. We seek to collaborate to improve society while digitally transforming Sumitomo Corporation's diverse business activities.</p>
+      <p class="prose rv" style="margin-top:1.2rem">We provide our portfolio companies with a highly skilled team conversant in Israeli business norms and a global corporation committed to partner and scale the technologies of tomorrow, today.</p>
+      <div style="margin-top:2.6rem" class="rv">
+        <a class="btn btn-ghost" href="firm.html"><span>Read the firm</span>
+          <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOMAINS ============ -->
+<section class="sect dark">
+  <div class="wrap">
+    <span class="numeral" style="right:2vw; top:-3vw">02</span>
+    <p class="tag rv">02 · Domains</p>
+    <h2 class="display h1 rv" style="margin:1.2rem 0 3.4rem; max-width:18ch">Five domains where<br>Israeli invention meets<br><span class="italic">Japanese industrial scale.</span></h2>
+    <div class="orbit">
+      <a class="orb rv" href="roadmaps.html#mobility"><img src="img/plate-mobility.jpg" alt="Mobility"><h4>Mobility</h4></a>
+      <a class="orb rv" href="roadmaps.html#energy"><img src="img/plate-energy.jpg" alt="Energy"><h4>Energy</h4></a>
+      <a class="orb rv" href="roadmaps.html#health"><img src="img/plate-health.jpg" alt="Digital Health"><h4>Digital Health</h4></a>
+      <a class="orb rv" href="roadmaps.html#agtech"><img src="img/plate-agtech.jpg" alt="Food and Agtech"><h4>Food &amp; Agtech</h4></a>
+      <a class="orb rv" href="roadmaps.html#cyber"><img src="img/plate-cyber.jpg" alt="IT and Cyber"><h4>IT &amp; Cyber</h4></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIGNETTES ============ -->
+<section class="sect">
+  <div class="wrap">
+    <p class="tag rv">03 · Partnerships</p>
+    <h2 class="display h1 rv" style="margin:1.2rem 0 2.4rem; max-width:16ch">What our founders<br>are building.</h2>
+    <div id="vigs"></div>
+    <div style="margin-top:3rem" class="rv">
+      <a class="btn" href="portfolio.html"><span>All 15 companies</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RHETORICAL FULL-BLEED × 3 ============ -->
+<section class="bleed plate-energy" data-sector="energy">
+  <div class="bleed-plate"></div>
+  <div class="bleed-bg"><canvas class="fieldc" data-hue="energy"></canvas></div>
+  <div class="wrap">
+    <p class="tag rv" style="color:rgba(242,237,227,.6)">H2pro · Energy</p>
+    <h2 class="display h1 rv" style="color:var(--cream); margin-top:1.2rem">What happens to heavy industry when hydrogen stops being expensive?</h2>
+    <div class="meta rv">
+      <img src="img/h2pro.png" alt="H2pro">
+      <a class="btn btn-ghost" href="https://www.h2pro.co/" target="_blank" rel="noopener"><span>See how</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="bleed plate-cyber" data-sector="cyber">
+  <div class="bleed-plate"></div>
+  <div class="bleed-bg"><canvas class="fieldc" data-hue="cyber"></canvas></div>
+  <div class="wrap">
+    <p class="tag rv" style="color:rgba(242,237,227,.6)">Classiq · Quantum</p>
+    <h2 class="display h1 rv" style="color:var(--cream); margin-top:1.2rem">Who writes the software for a computer the world has not finished building?</h2>
+    <div class="meta rv">
+      <img src="img/classiq.png" alt="Classiq">
+      <a class="btn btn-ghost" href="quantum-computing.html"><span>Read our thesis</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="bleed plate-mobility" data-sector="mobility">
+  <div class="bleed-plate"></div>
+  <div class="bleed-bg"><canvas class="fieldc" data-hue="mobility"></canvas></div>
+  <div class="wrap">
+    <p class="tag rv" style="color:rgba(242,237,227,.6)">Ottopia · Mobility</p>
+    <h2 class="display h1 rv" style="color:var(--cream); margin-top:1.2rem">If no one is in the driver's seat, who is still responsible for the road?</h2>
+    <div class="meta rv">
+      <img src="img/ottopia.png" alt="Ottopia">
+      <a class="btn btn-ghost" href="https://ottopia.tech/" target="_blank" rel="noopener"><span>See how</span>
+        <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUE CREATION ============ -->
+<section class="sect" style="background:var(--ivory-2)">
+  <div class="wrap two">
+    <div class="sticky">
+      <p class="tag rv">04 · Value Creation</p>
+      <h2 class="display h1 rv" style="margin-top:1.2rem">Your strategic<br><span class="italic">investor of choice.</span></h2>
+    </div>
+    <div>
+      <p class="prose rv">Entrepreneurs understand that an engaged corporate partner can significantly accelerate growth. At IN Venture our strategic value for startups is based on promoting value creation between our portfolio companies and Sumitomo Corporation's global businesses.</p>
+      <p class="prose rv" style="margin-top:1.2rem">Our investment decisions are taken in Tel Aviv while our value-add activities are managed by the local IN Venture team in close collaboration with Sumitomo companies around the globe.</p>
+      <div class="pull rv" style="margin-top:2.6rem">
+        <p class="display">By placing corporate impact at the heart of our investment process, we deliver impact beyond the reach of most investors.</p>
+      </div>
+      <div style="margin-top:2.4rem" class="rv">
+        <a class="btn" href="value-creation.html"><span>How it works</span>
+          <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTENT RIVER ============ -->
+<section class="sect abyss">
+  <div class="wrap">
+    <p class="tag rv">05 · Insights</p>
+    <h2 class="display h1 rv" style="margin:1.2rem 0 2.6rem; max-width:16ch">What we are<br>reading the market on.</h2>
+    <div class="river">
+      <a class="river-item rv" href="quantum-computing.html">
+        <span class="river-type">Perspective</span>
+        <span class="river-title">Quantum Computing</span>
+        <span class="river-by">Eyal Rosner · 16 October 2025</span>
+        <span class="river-cta"><span>Read</span></span>
+      </a>
+      <a class="river-item rv" href="roadmaps.html#energy">
+        <span class="river-type">Roadmap</span>
+        <span class="river-title">Green Hydrogen</span>
+        <span class="river-by">IN Venture · 16 September 2025</span>
+        <span class="river-cta"><span>Open roadmap</span></span>
+      </a>
+      <a class="river-item rv" href="roadmaps.html">
+        <span class="river-type">Thesis</span>
+        <span class="river-title">Five roadmaps for 2026</span>
+        <span class="river-by">IN Venture · Tel Aviv</span>
+        <span class="river-cta"><span>Open</span></span>
+      </a>
+      <a class="river-item rv" href="position.html">
+        <span class="river-type">Position</span>
+        <span class="river-title">Why we do not write long homepages</span>
+        <span class="river-by">IN Venture</span>
+        <span class="river-cta"><span>Read</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="sect" data-hdr="dark" style="background:var(--forest); color:var(--cream)">
+  <div class="wrap" style="text-align:center">
+    <h2 class="display mega rv" style="max-width:none">Building something<br><span class="italic red">large.</span></h2>
+    <p class="prose rv" style="margin:1.8rem auto 2.6rem; color:var(--cream-dim); text-align:center">Send us one paragraph on the market you intend to take. We answer from Tel Aviv.</p>
+    <a class="btn rv" style="--bg:var(--ivory); --fg:var(--forest)" href="mailto:contact@in-venture.com"><span>contact@in-venture.com</span>
+      <svg class="arw" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+  </div>
+</section>
+
+<script type="module">
+import { mountChrome, mountClocks, mountCounters } from './js/site.js';
+import { PORTFOLIO } from './js/data.js';
+import { initGlobe } from './js/globe.js';
+import { initField } from './js/field.js';
+
+mountChrome('', false);
+mountClocks(document.getElementById('heroClocks'));
+mountCounters();
+initGlobe(document.getElementById('globe'));
+document.querySelectorAll('.fieldc').forEach(c=>initField(c, c.dataset.hue));
+
+const picks = ['CLASSIQ','H2pro','BRIA','Ottopia','CYPAGO','ALTA'];
+document.getElementById('vigs').innerHTML = picks.map(n=>{
+  const c = PORTFOLIO.find(p=>p.name===n);
+  return `<a class="vig rv" href="${c.url}" target="_blank" rel="noopener">
+    <p>${c.desc}<span class="red">.</span></p>
+    <span class="chips"><span class="chip"><i></i>${c.name}</span><span class="chip">${c.sector}</span><span class="chip">${c.status}</span></span>
+  </a>`;
+}).join('');
+</script>
+</body>
+</html>
