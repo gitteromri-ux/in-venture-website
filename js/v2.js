@@ -65,8 +65,8 @@ function mountCursor(){
   c.innerHTML = '<span class="cur-d"></span><span class="cur-r"></span>';
   document.body.appendChild(c);
   const dot = c.querySelector('.cur-d'), ring = c.querySelector('.cur-r');
-  let mx=-100,my=-100, dx=-100,dy=-100, rx=-100,ry=-100;
-  addEventListener('pointermove', e=>{ mx=e.clientX; my=e.clientY; }, {passive:true});
+  let mx=-400,my=-400, dx=-400,dy=-400, rx=-400,ry=-400;
+  addEventListener('pointermove', e=>{ mx=e.clientX; my=e.clientY; c.classList.add('live'); }, {passive:true});
   (function raf(){
     dx += (mx-dx)*0.42; dy += (my-dy)*0.42;
     rx += (mx-rx)*0.13; ry += (my-ry)*0.13;
