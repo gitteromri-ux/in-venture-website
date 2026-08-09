@@ -8,6 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/v2.css">
 <style>
 .feature{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:clamp(2rem,5vw,5rem); align-items:center; }
 .feature img{ width:100%; aspect-ratio:16/11; object-fit:cover; filter:grayscale(.35) contrast(1.05); transition:1s var(--ease); }
@@ -17,10 +18,15 @@
 </head>
 <body>
 
-<section class="wrap" style="padding-top:clamp(9rem,16vw,14rem)">
-  <p class="tag rv">Insights</p>
-  <h1 class="display mega rv" style="margin:1.2rem 0 0; max-width:13ch">What we are<br><span class="italic">reading the<br>market on.</span></h1>
+<section class="phero">
+  <div class="phero-bg"><img src="img/n-insights.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="kicker"><span class="pip"></span><span>Insights</span></div>
+    <h1 class="neon">What we are reading <span class="it" style="color:var(--hot)">the market on.</span></h1>
+    <p class="lead2">Perspectives, roadmaps and positions from Tel Aviv and Tokyo.</p>
+  </div>
 </section>
+
 
 <section class="sect wrap" style="padding-top:clamp(3rem,5vw,4rem)">
   <a class="feature rv" href="quantum-computing.html">
@@ -94,7 +100,9 @@
 </section>
 
 <script type="module">
+import { initV2 } from './js/v2.js';
 import { mountChrome } from './js/site.js';
+initV2();
 mountChrome('Insights');
 </script>
 </body>

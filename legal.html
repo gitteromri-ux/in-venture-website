@@ -8,6 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/v2.css">
 </head>
 <body>
 
@@ -25,7 +26,9 @@
 <section class="sect"></section>
 
 <script type="module">
+import { initV2 } from './js/v2.js';
 import { mountChrome } from './js/site.js';
+initV2();
 mountChrome('');
 </script>
 </body>

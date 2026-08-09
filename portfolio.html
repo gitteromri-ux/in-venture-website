@@ -8,19 +8,19 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/v2.css">
 </head>
 <body>
 
-<section class="wrap" style="padding-top:clamp(9rem,16vw,14rem)">
-  <p class="tag rv">Portfolio</p>
-  <h1 class="display mega rv" style="margin:1.2rem 0 0">Exceptional founders<br><span class="italic">build impactful<br>companies.</span></h1>
-  <div class="stats rv" style="margin-top:clamp(3rem,6vw,5rem)">
-    <div class="stat"><p class="n"><span data-to="15">0</span></p><p class="l">Companies backed</p></div>
-    <div class="stat"><p class="n"><span data-to="10">0</span></p><p class="l">Active today</p></div>
-    <div class="stat"><p class="n"><span data-to="5">0</span></p><p class="l">Acquired</p></div>
-    <div class="stat"><p class="n"><span data-to="5">0</span></p><p class="l">Domains covered</p></div>
+<section class="phero">
+  <div class="phero-bg"><img src="img/n-portfolio.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="kicker"><span class="pip"></span><span>Portfolio</span></div>
+    <h1 class="neon">Exceptional founders build <span class="it" style="color:var(--hot)">impactful companies.</span></h1>
+    <p class="lead2">Fifteen Israeli deep-tech companies. Ten still building, five acquired.</p>
   </div>
 </section>
+
 
 <section class="sect wrap" style="padding-top:clamp(3rem,6vw,4.5rem)">
   <div class="filters" id="filters"></div>
@@ -41,8 +41,10 @@
 </section>
 
 <script type="module">
+import { initV2 } from './js/v2.js';
 import { mountChrome, mountCounters } from './js/site.js';
 import { PORTFOLIO } from './js/data.js';
+initV2();
 mountChrome('Portfolio');
 mountCounters();
 

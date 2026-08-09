@@ -8,6 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23E0202B'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/v2.css">
 <style>
 .unit{ grid-template-columns:70px minmax(0,1fr) minmax(0,.8fr); align-items:start; gap:clamp(1rem,3vw,3rem); }
 .unit-n{ color:var(--red); }
@@ -21,10 +22,15 @@
 </head>
 <body>
 
-<section class="wrap" style="padding-top:clamp(9rem,16vw,14rem)">
-  <p class="tag rv">The Firm · Integrity</p>
-  <h1 class="display mega rv" style="margin:1.2rem 0 0; max-width:14ch">A venture fund<br>with a <span class="italic">multinational<br>behind it.</span></h1>
+<section class="phero">
+  <div class="phero-bg"><img src="img/n-firm.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="kicker"><span class="pip"></span><span>The Firm · Integrity</span></div>
+    <h1 class="neon">A venture fund with a <span class="it" style="color:var(--hot)">multinational behind it.</span></h1>
+    <p class="lead2">IN Venture is a Sumitomo Corporation backed venture fund investing in deep-tech early stage Israeli startups with the potential to become global category leaders.</p>
+  </div>
 </section>
+
 
 <section class="sect wrap" style="padding-top:clamp(3rem,5vw,4rem)">
   <div class="two">
@@ -93,8 +99,10 @@
 </section>
 
 <script type="module">
+import { initV2 } from './js/v2.js';
 import { mountChrome, mountCounters } from './js/site.js';
 import { initGlobe } from './js/globe.js';
+initV2();
 mountChrome('Firm');
 mountCounters();
 initGlobe(document.getElementById('globe2'), {cities:['Tel Aviv','Tokyo','London','San Francisco','Hong Kong'], theme:'dark', sunX:1.9, sunY:1.5, sunScale:.62});
