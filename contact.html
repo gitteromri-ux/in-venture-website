@@ -105,7 +105,7 @@
 import { initV2 } from './js/v2.js';
 import { mountChrome, mountClocks } from './js/site.js';
 import { initGlobe } from './js/globe.js';
-initV2();
+initV2({ skipIntro:true });
 mountChrome('Contact');
 mountClocks(document.getElementById('cClocks'));
 initGlobe(document.getElementById('globe3'), {cities:['Tel Aviv','Tokyo'], sunX:2.4, sunY:1.6, sunScale:.72});

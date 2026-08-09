@@ -53,7 +53,7 @@
 import { initV2 } from './js/v2.js';
 import { mountChrome, mountClocks } from './js/site.js';
 import { TEAM } from './js/data.js';
-initV2();
+initV2({ skipIntro:true });
 mountChrome('Team');
 mountClocks(document.getElementById('tClocks'));
 const card = p=>`<article class="person rv"><figure><img src="${p.img}" alt="${p.name}"></figure><h3>${p.name}</h3><p>${p.title}</p></article>`;

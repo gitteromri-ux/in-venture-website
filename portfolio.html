@@ -22,6 +22,16 @@
 </section>
 
 
+
+<section class="wrap" style="padding-top:clamp(3rem,6vw,4.5rem)">
+  <div class="rail">
+    <div class="up"><p class="n"><span data-to="15">0</span></p><p class="l">Companies backed</p></div>
+    <div class="up"><p class="n"><span data-to="10">0</span></p><p class="l">Active today</p></div>
+    <div class="up"><p class="n"><span data-to="5">0</span></p><p class="l">Acquired</p></div>
+    <div class="up"><p class="n"><span data-to="5">0</span></p><p class="l">Domains covered</p></div>
+  </div>
+</section>
+
 <section class="sect wrap" style="padding-top:clamp(3rem,6vw,4.5rem)">
   <div class="filters" id="filters"></div>
   <div class="pf-head">
@@ -44,7 +54,7 @@
 import { initV2 } from './js/v2.js';
 import { mountChrome, mountCounters } from './js/site.js';
 import { PORTFOLIO } from './js/data.js';
-initV2();
+initV2({ skipIntro:true });
 mountChrome('Portfolio');
 mountCounters();
 

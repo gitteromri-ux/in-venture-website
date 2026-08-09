@@ -1,9 +1,10 @@
 /* IN VENTURE V2 — motion system.
    Preloader, curtain, magnetic cursor, Lenis smooth scroll, GSAP scroll choreography. */
 
-export function initV2({ onProgress, onReady } = {}){
+export function initV2({ onProgress, onReady, skipIntro } = {}){
   document.body.classList.add('v2');
-  mountPreloader(onReady);
+  if(skipIntro){ document.querySelectorAll('.ln').forEach(l=>l.classList.add('on')); if(onReady) setTimeout(onReady,60); }
+  else mountPreloader(onReady);
   mountCursor();
   return mountMotion(onProgress);
 }

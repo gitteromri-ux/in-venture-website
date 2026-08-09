@@ -102,7 +102,7 @@
 import { initV2 } from './js/v2.js';
 import { mountChrome, mountCounters } from './js/site.js';
 import { initGlobe } from './js/globe.js';
-initV2();
+initV2({ skipIntro:true });
 mountChrome('Firm');
 mountCounters();
 initGlobe(document.getElementById('globe2'), {cities:['Tel Aviv','Tokyo','London','San Francisco','Hong Kong'], theme:'dark', sunX:1.9, sunY:1.5, sunScale:.62});
