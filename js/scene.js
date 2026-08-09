@@ -15,17 +15,17 @@ export function initScene(canvas){
   const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:false, powerPreference:'high-performance'});
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.4));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.05;
+  renderer.toneMappingExposure = 1.25;
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color('#03100C');
-  scene.fog = new THREE.FogExp2('#03100C', 0.055);
+  scene.background = new THREE.Color('#0A0A0B');
+  scene.fog = new THREE.FogExp2('#0A0A0B', 0.05);
 
   const cam = new THREE.PerspectiveCamera(38, 1, 0.1, 120);
   cam.position.set(0, 0.15, 9.2);
 
-  const RED = new THREE.Color('#FF2A31');
-  const GRN = new THREE.Color('#0F5B44');
+  const RED = new THREE.Color('#E8121C');
+  const GRN = new THREE.Color('#A1A1A6');
 
   /* ---------- environment for refraction ---------- */
   const pmrem = new THREE.PMREMGenerator(renderer);
@@ -34,7 +34,7 @@ export function initScene(canvas){
     new THREE.SphereGeometry(30, 32, 32),
     new THREE.ShaderMaterial({
       side: THREE.BackSide,
-      uniforms:{ uA:{value:new THREE.Color('#04150F')}, uB:{value:new THREE.Color('#0E4634')}, uC:{value:RED} },
+      uniforms:{ uA:{value:new THREE.Color('#0A0A0B')}, uB:{value:new THREE.Color('#6E6E73')}, uC:{value:RED} },
       vertexShader:`varying vec3 vP; void main(){ vP = position; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
       fragmentShader:`
         uniform vec3 uA,uB,uC; varying vec3 vP;
@@ -45,7 +45,7 @@ export function initScene(canvas){
           float sun = pow(max(0., dot(n, normalize(vec3(.55,.42,-.72)))), 22.0);
           c += uC*sun*2.4;
           float rim = pow(max(0., dot(n, normalize(vec3(-.7,.1,.4)))), 8.0);
-          c += vec3(.55,.72,.64)*rim*.32;
+          c += vec3(.92,.92,.94)*rim*.55;
           gl_FragColor = vec4(c,1.);
         }`
     })
@@ -61,10 +61,10 @@ export function initScene(canvas){
   const core = new THREE.Mesh(
     new THREE.IcosahedronGeometry(1.72, 8),
     new THREE.MeshPhysicalMaterial({
-      color: new THREE.Color('#0B3A2C'),
-      roughness: 0.06, metalness: 0.18,
+      color: new THREE.Color('#E9E9EC'),
+      roughness: 0.06, metalness: 0.55,
       clearcoat: 1, clearcoatRoughness: 0.04,
-      iridescence: 0.85, iridescenceIOR: 1.45, iridescenceThicknessRange:[140, 560],
+      iridescence: 0.35, iridescenceIOR: 1.35, iridescenceThicknessRange:[140, 560],
       envMapIntensity: 2.4
     })
   );
@@ -103,7 +103,7 @@ export function initScene(canvas){
     const r = 2.55 + i*0.52;
     const ring = new THREE.Mesh(
       new THREE.TorusGeometry(r, 0.0055 + i*0.0018, 8, 320),
-      new THREE.MeshBasicMaterial({color: i===1 ? RED : new THREE.Color('#87C4AA'), transparent:true, opacity: i===1 ? 0.75 : 0.30})
+      new THREE.MeshBasicMaterial({color: i===1 ? RED : new THREE.Color('#FFFFFF'), transparent:true, opacity: i===1 ? 0.85 : 0.34})
     );
     ring.rotation.x = Math.PI/2 - 0.32 - i*0.10;
     ring.rotation.z = i*0.42;
@@ -159,15 +159,15 @@ export function initScene(canvas){
         gl_Position = projectionMatrix*mv; }`,
     fragmentShader:`varying float vA;
       void main(){ float d = length(gl_PointCoord-0.5); if(d>0.5) discard;
-        gl_FragColor = vec4(0.80,0.94,0.87, smoothstep(0.5,0.0,d)*vA*0.42); }`
+        gl_FragColor = vec4(1.0,1.0,1.0, smoothstep(0.5,0.0,d)*vA*0.5); }`
   }));
   scene.add(dust);
 
   /* ---------- lights ---------- */
-  scene.add(new THREE.AmbientLight(0x9fd8c2, 0.35));
+  scene.add(new THREE.AmbientLight(0xffffff, 0.55));
   const key = new THREE.DirectionalLight(0xffffff, 1.5); key.position.set(4,5,4); scene.add(key);
   const rim = new THREE.PointLight(RED, 26, 22); rim.position.set(2.9,1.6,-2.4); scene.add(rim);
-  const fill = new THREE.PointLight(0x53E0A8, 9, 20); fill.position.set(-4.4,-1.6,3.4); scene.add(fill);
+  const fill = new THREE.PointLight(0xffffff, 12, 22); fill.position.set(-4.4,-1.6,3.4); scene.add(fill);
 
   /* ---------- post ---------- */
   const composer = new EffectComposer(renderer);
