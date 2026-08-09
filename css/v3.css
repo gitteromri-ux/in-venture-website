@@ -100,3 +100,37 @@ body.v2::after{ opacity:.03; }
 .v2 .person figure{ background:var(--ink-3) !important; box-shadow:inset 0 0 0 1px var(--line) !important; }
 .v2 .dcell{ background:var(--ink-2) !important; }
 .v2 .hcard{ background:var(--ink-2) !important; box-shadow:inset 0 0 0 1px var(--line), 0 40px 90px -50px #000 !important; }
+
+/* ═══ BRIGHT HERO: white ground, black type, red accent ═══ */
+.phero{ background:#FFFFFF !important; min-height:78svh; align-items:center;
+  padding:clamp(8rem,15vh,11rem) 0 clamp(4rem,8vh,6rem); }
+.phero-bg{ left:auto !important; right:0; width:52%; }
+.phero-bg img{ filter:none !important; transform:none !important; object-position:center; }
+.phero::before{ background:linear-gradient(90deg, #fff 0%, #fff 46%, rgba(255,255,255,.55) 56%, transparent 68%) !important; }
+.phero .wrap{ max-width:1620px; }
+.phero .kicker span{ color:#8A8A8F !important; }
+.phero .kicker .pip{ background:var(--hot); box-shadow:0 0 0 5px rgba(232,18,28,.14); }
+.phero h1{ color:#0A0A0B !important; text-shadow:none !important; max-width:13ch; }
+.phero h1 .it,.phero h1 span[style]{ color:var(--hot) !important; }
+.phero .lead2{ color:#57575C !important; max-width:36ch; }
+.phero .neon{ text-shadow:none !important; }
+@media (max-width:860px){
+  .phero{ min-height:auto; padding:7rem 0 2.5rem; }
+  .phero-bg{ position:relative; width:100%; height:38vh; margin-top:1.8rem; order:2; }
+  .phero::before{ background:none !important; }
+  .phero .wrap{ display:flex; flex-direction:column; }
+}
+/* light hero needs a dark header, invert it while over white */
+.v2 .hdr:not(.stuck){ color:#0A0A0B; }
+.v2 .hdr:not(.stuck)::before{ background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.6) 55%, transparent 100%); }
+.v2 .hdr:not(.stuck) .nav a{ color:#57575C !important; }
+.v2 .hdr:not(.stuck) .nav a:hover{ color:#0A0A0B !important; }
+.v2 .hdr:not(.stuck) .nav a.active{ color:var(--hot) !important; }
+.v2 .hdr:not(.stuck) .brand-txt{ color:#0A0A0B; }
+.v2 .hdr:not(.stuck) .cmd-trigger{ color:#8A8A8F !important; box-shadow:inset 0 0 0 1px rgba(0,0,0,.18) !important; }
+/* home page keeps the dark header */
+body.home .hdr:not(.stuck){ color:var(--fg); }
+body.home .hdr:not(.stuck)::before{ background:linear-gradient(180deg, rgba(10,10,11,.92) 0%, rgba(10,10,11,.5) 55%, transparent 100%); }
+body.home .hdr:not(.stuck) .nav a{ color:var(--fg-dim) !important; }
+body.home .hdr:not(.stuck) .brand-txt{ color:#fff; }
+body.home .hdr:not(.stuck) .cmd-trigger{ color:var(--gray) !important; box-shadow:inset 0 0 0 1px var(--line-2) !important; }
